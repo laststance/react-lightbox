@@ -121,7 +121,7 @@ export default function Home() {
               <div className="relative flex items-center">
                 <div className="grow overflow-x-auto font-mono text-sm">
                   <code className="text-emerald-400 block pr-12">
-                    npx shadcn@latest add https://react-lightbox.vercel.app/r/lightbox.json
+                    npx shadcn@latest add https://react-lightbox-nu.vercel.app/r/lightbox.json
                   </code>
                 </div>
                 <button

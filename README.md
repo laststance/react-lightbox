@@ -5,7 +5,7 @@ A responsive lightbox component for React with keyboard navigation and accessibi
 ## Installation
 
 ```bash
-npx shadcn@latest add https://react-lightbox.vercel.app/r/lightbox.json
+npx shadcn@latest add https://react-lightbox-nu.vercel.app/r/lightbox.json
 ```
 
 ## Usage
