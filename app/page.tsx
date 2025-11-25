@@ -39,7 +39,7 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-svh bg-gradient-to-b from-background to-muted/20">
+    <div className="min-h-svh bg-linear-to-b from-background to-muted/20">
       <div className="max-w-4xl mx-auto flex flex-col px-6 py-12 gap-16">
         {/* Header */}
         <header className="flex flex-col gap-4 text-center pt-8">
@@ -50,7 +50,7 @@ export default function Home() {
             <span>·</span>
             <span>Open Source</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight bg-linear-to-r from-foreground to-foreground/70 bg-clip-text text-transparent pb-1">
             React Lightbox
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
@@ -109,34 +109,38 @@ export default function Home() {
               <div className="h-px flex-1 bg-border" />
             </div>
             <div className="relative group">
-              <div className="rounded-lg bg-zinc-950 dark:bg-zinc-900 p-4 font-mono text-sm overflow-x-auto">
-                <div className="flex items-center gap-2 text-zinc-400 mb-3">
-                  <div className="flex gap-1.5">
-                    <div className="w-3 h-3 rounded-full bg-zinc-700" />
-                    <div className="w-3 h-3 rounded-full bg-zinc-700" />
-                    <div className="w-3 h-3 rounded-full bg-zinc-700" />
-                  </div>
-                  <span className="text-xs">Terminal</span>
+            <div className="rounded-lg bg-zinc-950 dark:bg-zinc-900 p-4 font-mono text-sm">
+              <div className="flex items-center gap-2 text-zinc-400 mb-3">
+                <div className="flex gap-1.5">
+                  <div className="w-3 h-3 rounded-full bg-zinc-700" />
+                  <div className="w-3 h-3 rounded-full bg-zinc-700" />
+                  <div className="w-3 h-3 rounded-full bg-zinc-700" />
                 </div>
-                <code className="text-emerald-400">
-                  npx shadcn@latest add https://react-lightbox.vercel.app/r/lightbox.json
-                </code>
+                <span className="text-xs">Terminal</span>
               </div>
-              <button
-                onClick={handleCopy}
-                className="absolute top-12 right-3 p-2 rounded-md bg-zinc-800 hover:bg-zinc-700 text-zinc-400 hover:text-zinc-200 transition-colors opacity-0 group-hover:opacity-100"
-                aria-label="Copy to clipboard"
-              >
-                {copied ? (
-                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                ) : (
-                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                  </svg>
-                )}
-              </button>
+              <div className="relative flex items-center">
+                <div className="grow overflow-x-auto font-mono text-sm">
+                  <code className="text-emerald-400 block pr-12">
+                    npx shadcn@latest add https://react-lightbox.vercel.app/r/lightbox.json
+                  </code>
+                </div>
+                <button
+                  onClick={handleCopy}
+                  className="absolute right-0 top-1/2 -translate-y-1/2 p-2 rounded-md bg-zinc-800 hover:bg-zinc-700 text-zinc-400 hover:text-zinc-200 transition-colors opacity-0 group-hover:opacity-100"
+                  aria-label="Copy to clipboard"
+                >
+                  {copied ? (
+                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  ) : (
+                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                    </svg>
+                  )}
+                </button>
+              </div>
+            </div>
             </div>
           </section>
 
